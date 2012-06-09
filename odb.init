@@ -23,8 +23,8 @@
 . /etc/init.d/functions
 
 prog="ODB"
-pidfile=/var/run/keystone/keystone.pid
-lckfile=/var/lock/subsys/openstack-keyston
+pidfile=/var/run/keystone/odb.pid
+lckfile=/var/lock/subsys/odb-lock
 binfile=/usr/share/odb/ironcloud_start
 
 start() {
