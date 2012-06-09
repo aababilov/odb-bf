@@ -19,6 +19,7 @@ ODB package ...
 %setup -q -n odb
 
 %build
+install -d -m %{buildroot}%{_datarootdir}
 cp -r odb %{buildroot}%{_datarootdir}/
 cp %{SOURCE1} %{buildroot}%{_sysconfdir}/
 
