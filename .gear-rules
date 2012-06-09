@@ -1,0 +1,2 @@
+copy: ironcloud.conf
+tar.gz: . name=odb base=odb
