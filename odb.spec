@@ -10,9 +10,6 @@ Source0:	odb.tar.gz
 Source1:	ironcloud.conf
 BuildRoot:	%(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 
-BuildRequires:	
-Requires:	
-
 %description
 ODB package ...
 #One day Nikita asks for ODB RPM instead of JUST using maven. And then this stupid and unneeded package was born ...
