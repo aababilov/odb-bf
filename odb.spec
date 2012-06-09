@@ -16,6 +16,7 @@ ODB package ...
 
 
 %prep
+%setup -q -n odb
 
 %build
 install -d -m 755 %{buildroot}%{_datarootdir}
