@@ -33,11 +33,9 @@ install -p -D -m 755 %{SOURCE2} %{buildroot}%{_initrddir}/odb
 rm -rf $RPM_BUILD_ROOT
 
 %post
-service odb start
 
 
 %preun
-service odb stop
 
 
 %files
