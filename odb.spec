@@ -8,6 +8,7 @@ License:	Uganda Drivers License
 URL:		http://idontknowwhyineedtopackagethisstupidpackage.com	
 Source0:	odb.tar.gz
 Source1:	ironcloud.conf
+Source2:	odb.init
 BuildRoot:	%(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 
 %description
@@ -25,16 +26,24 @@ install -d -m 755 %{buildroot}%{_datarootdir}
 install -d -m 755 %{buildroot}%{_sysconfdir}
 cp -r odb %{buildroot}%{_datarootdir}/
 cp %{SOURCE1} %{buildroot}%{_sysconfdir}/ironcloud.conf
-
+install -p -D -m 755 %{SOURCE2} %{buildroot}%{_initrddir}/odb
 
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+%post
+service odb start
+
+
+%preun
+service odb stop
+
 
 %files
 %defattr(-,root,root,-)
 %{_datarootdir}/odb
+%{_initrddir}/odb
 %config(noreplace)
 %{_sysconfdir}/ironcloud.conf
 %doc
