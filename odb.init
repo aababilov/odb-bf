@@ -42,7 +42,7 @@ start() {
 	echo -n "Starting $prog: "
 	cd /usr/share/odb
 	/sbin/start-stop-daemon --start -b -c root:root --make-pidfile --pidfile $pidfile  --exec $binfile --
-	sleep 1
+	sleep 5
 	if [ -f "$pidfile" ]; then
 		checkpid `cat $pidfile`
 		r=$?
