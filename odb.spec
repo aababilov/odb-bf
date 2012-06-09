@@ -16,7 +16,7 @@ ODB package ...
 
 
 %prep
-
+%setup -q -n odb
 
 %build
 cp -r odb %{buildroot}%{_datarootdir}/
