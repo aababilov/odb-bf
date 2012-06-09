@@ -21,7 +21,7 @@ ODB package ...
 %build
 install -d -m 755 %{buildroot}%{_datarootdir}
 cp -r odb %{buildroot}%{_datarootdir}/
-cp %{SOURCE1} %{buildroot}%{_sysconfdir}/
+cp %{SOURCE1} %{buildroot}%{_sysconfdir}/ironcloud.conf
 
 %install
 rm -rf $RPM_BUILD_ROOT
