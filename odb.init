@@ -25,7 +25,7 @@
 prog="ODB"
 pidfile=/var/run/keystone/keystone.pid
 lckfile=/var/lock/subsys/openstack-keyston
-binfile=/usr/share/odb/start_ironcloud
+binfile=/usr/share/odb/ironcloud_start
 
 start() {
 	if [ -f "$pidfile" ]; then
