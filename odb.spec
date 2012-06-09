@@ -19,12 +19,13 @@ ODB package ...
 %setup -q -n odb
 
 %build
+
+%install
 install -d -m 755 %{buildroot}%{_datarootdir}
 install -d -m 755 %{buildroot}%{_sysconfdir}
 cp -r odb %{buildroot}%{_datarootdir}/
 cp %{SOURCE1} %{buildroot}%{_sysconfdir}/ironcloud.conf
 
-%install
 
 
 %clean
